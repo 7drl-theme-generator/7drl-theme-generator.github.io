@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7DRL Theme Generator</title>
+	<style>
+a.btn {
+display: block; 
+width: 240px; 
+height: 40px; 
+padding: 0 0 0 0; 
+margin: 0 auto;
+background: #7f7fff;
+color: #ffffff;
+border: 0px;
+border-radius: 0px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+display: table-cell;
+vertical-align: middle;
+}
+p.large {
+color: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 28px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+margin-bottom: 2cm;
+}
+p.small {
+color: #444444;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+	</style>
+</head>
+	<body>
+		<center><p class = "small">Your 7DRL theme is:</p>
+		<center><p id="theme" class = "large"></p>
+		<center><a href = "#" class = "btn" onclick="generateTheme()">Try again!</a>
+		<script>
+		    window.onload = generateTheme();
+		    function generateTheme() {
+		        var a = ["Cyber", "Voodoo", "Berserking", "Alien", "Insane", "Bad-ass", "Naked", "Fiery", "Undead", "Neophyte", "Master", "Handicapped", "Drunk", "Magic", "Time-traveling", "Hungry", "Naughty", "Tribal", "Aztec", "Religious", "Hipster"];
+		        var b = ["archaeologist", "princess", "cat", "rogue", "octopus", "knight", "ninja", "samurai", "spirit", "inventor", "clown", "dragon", "zombie", "hacker", "blogger", "wizard", "monk", "mutant", "pirate", "goddess"];
+		        var c = ["explores", "breaks into", "escapes from", "destroys", "secures", "examines", "inspects", "retrieves an amulet from", "steals treasures from", "saves a damsel from", "lost in", "getting drunk in", "fights through", "wakes up in", "hallucinates in", "kills everything in", "finds true love in", "cleanses evil from", "rescues hostages from", "investigates a murder in"];
+		        var d = ["demonic", "derelict", "alien", "zombie-infested", "lovecraftian", "medieval", "ancient", "war-torn", "futuristic", "goblin", "robot", "overgrown", "bug-ridden", "radioactive", "ordinary", "nightmarish", "infinite", "ever-changing", "imaginary", "eldritch"];
+		        var e = ["base", "pyramid", "spaceship", "dungeon", "catacombs", "caves", "warehouse", "city", "laboratory", "theme park", "castle", "jungle", "restaurant", "circus", "factory", "wasteland", "ruins", "sex-shop", "skyscraper"];
+
+		        var a1 = a[Math.floor(Math.random() * a.length)];
+		        var b1 = b[Math.floor(Math.random() * b.length)];
+		        var c1 = c[Math.floor(Math.random() * c.length)];
+		        var d1 = d[Math.floor(Math.random() * d.length)];
+		        var e1 = e[Math.floor(Math.random() * e.length)];
+		        document.getElementById("theme").innerHTML = a1 + " " + b1 + " " + c1 + " the " + d1 + " " + e1;
+		    }
+		</script>
+	</body>
+</html>
