@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,23 +51,50 @@ margin-bottom: 2cm;
 	<body>
 		<center><p class = "small">Your 7DRL theme is:</p>
 		<center><p id="theme" class = "large"></p>
+		<center><p id="features" class = "small"></p>
 		<center><a href = "#" class = "btn" onclick="generateTheme()">Try again!</a>
 		<script>
 		    window.onload = generateTheme();
 		    function generateTheme() {
-		        var a = ["Cyber", "Voodoo", "Berserking", "Alien", "Insane", "Bad-ass", "Naked", "Fiery", "Undead", "Neophyte", "Master", "Handicapped", "Drunk", "Magic", "Time-traveling", "Hungry", "Naughty", "Tribal", "Aztec", "Religious", "Hipster"];
-		        var b = ["archaeologist", "princess", "cat", "rogue", "octopus", "knight", "ninja", "samurai", "spirit", "inventor", "clown", "dragon", "zombie", "hacker", "blogger", "wizard", "monk", "mutant", "pirate", "goddess"];
-		        var c = ["explores", "breaks into", "escapes from", "destroys", "secures", "examines", "inspects", "retrieves an amulet from", "steals treasures from", "saves a damsel from", "lost in", "getting drunk in", "fights through", "wakes up in", "hallucinates in", "kills everything in", "finds true love in", "cleanses evil from", "rescues hostages from", "investigates a murder in"];
+		        var a = ["Cyber", "Voodoo", "Berserking", "Alien", "Insane", "Bad-ass", "Naked", "Fiery", "Undead", "Neophyte", "Master", "Handicapped", "Drunk", "Magic", "Time-traveling", "Hungry", "Naughty", "Tribal", "Aztec", "Religious", "Hipster", "Axe-wielding", "Gun-crazed", "Heavily drugged", "Corrupted", "Homeless", "Inquisitive", "Stellar", "Martian"];
+		        var b = ["archaeologist", "princess", "cat", "rogue", "octopus", "knight", "ninja", "samurai", "spirit", "inventor", "clown", "dragon", "zombie", "hacker", "blogger", "wizard", "monk", "mutant", "pirate", "goddess", "tree", "mushroom", "dinosaur", "demon", "inquisitor", "detective", "journalist", "chef", "brewer", "farmer", "gladiator", "priest", "barbarian", "shaman", "king"];
+		        var c = ["explores", "breaks into", "escapes from", "destroys", "secures", "examines", "inspects", "retrieves an amulet from", "steals treasures from", "saves a damsel from", "lost in", "getting drunk in", "fights through", "wakes up in", "hallucinates in", "kills everything in", "finds true love in", "cleanses evil from", "rescues hostages from", "investigates a murder in", "chilling out in", "trapped in"];
 		        var d = ["demonic", "derelict", "alien", "zombie-infested", "lovecraftian", "medieval", "ancient", "war-torn", "futuristic", "goblin", "robot", "overgrown", "bug-ridden", "radioactive", "ordinary", "nightmarish", "infinite", "ever-changing", "imaginary", "eldritch"];
-		        var e = ["base", "pyramid", "spaceship", "dungeon", "catacombs", "caves", "warehouse", "city", "laboratory", "theme park", "castle", "jungle", "restaurant", "circus", "factory", "wasteland", "ruins", "sex-shop", "skyscraper"];
+		        var e = ["base", "pyramid", "spaceship", "dungeon", "catacombs", "caves", "warehouse", "city", "laboratory", "theme park", "castle", "jungle", "restaurant", "circus", "factory", "wasteland", "ruins", "sex-shop", "skyscraper", "hell", "graveyard", "forest", "desert", "farm", "mountains", "hills", "village", "planet"];
+			var f = ["One-hit-kill",	"Elaborate crafting",	"Base building",	"Hex grid",	"Destructible environment",	"Turn limit",	"Tower defence elements",	"Multi-hit combos",	"Random teleportation",	"Puzzle elements",	"Single level",	"Short session",	"Procedurally generated narrative",	"On-demand switching between two realities",	"AI-controlled companions",	"Weak mobs, powerful bosses",	"Player only dies if surrounded",	"Huge swarms of mobs",	"Eating corpses causes mutations",	"No healing",	"Stealth",	"Hunger clock",	"Compact levels",	"Side view",	"Pure ASCII"];
+
+			var f = shuffle(f);
 
 		        var a1 = a[Math.floor(Math.random() * a.length)];
 		        var b1 = b[Math.floor(Math.random() * b.length)];
 		        var c1 = c[Math.floor(Math.random() * c.length)];
 		        var d1 = d[Math.floor(Math.random() * d.length)];
 		        var e1 = e[Math.floor(Math.random() * e.length)];
+			var f1 = f[0];
+var f2 = f[1];
+var f3 = f[2];
 		        document.getElementById("theme").innerHTML = a1 + " " + b1 + " " + c1 + " the " + d1 + " " + e1;
+			document.getElementById("features").innerHTML = f1 + " - " + f2 + " - "+ f3;
 		    }
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 		</script>
 	</body>
 </html>
